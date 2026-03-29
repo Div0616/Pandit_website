@@ -1,0 +1,25 @@
+.app {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+.mainContent {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Section transition wrapper */
+.sectionWrapper {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .mainContent {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,192 @@
+/* ==========================================
+   FOOTER — Persistent bottom section
+   ========================================== */
+
+.footer {
+    position: relative;
+    padding: 48px var(--section-padding) 24px;
+    background: linear-gradient(180deg, transparent 0%, rgba(74, 30, 80, 0.6) 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-top: 60px;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--warm-orange), var(--soft-pink), transparent);
+    border-radius: 2px;
+}
+
+/* Top grid: 3 columns */
+.footerGrid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 36px;
+}
+
+/* Brand column */
+.brand {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.brandLogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logoIcon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--orange-glow), var(--deep-pink));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: white;
+    box-shadow: 0 4px 14px rgba(244, 148, 61, 0.3);
+}
+
+.brandName {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 0.5px;
+}
+
+.brandDesc {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    max-width: 300px;
+}
+
+/* Links column */
+.footerColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.columnTitle {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--warm-orange);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 4px;
+}
+
+.footerLink {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    text-align: left;
+    transition: color var(--transition-fast), transform var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footerLink:hover {
+    color: var(--text-primary);
+    transform: translateX(4px);
+}
+
+.linkIcon {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Contact items */
+.contactItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+
+.contactIcon {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+/* Divider */
+.footerDivider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    margin-bottom: 20px;
+}
+
+/* Bottom bar */
+.footerBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copyright {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+}
+
+.socialLink {
+    width: 34px;
+    height: 34px;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-decoration: none;
+}
+
+.socialLink:hover {
+    background: linear-gradient(135deg, var(--deep-pink), var(--orange-glow));
+    border-color: transparent;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(244, 148, 61, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footerGrid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer {
+        padding: 36px 20px 20px;
+        margin-top: 40px;
+    }
+
+    .footerBottom {
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+    }
+}

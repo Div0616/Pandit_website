@@ -1,0 +1,134 @@
+/* ==========================================
+   PANDIT.COM — Global Styles & CSS Variables
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Primary palette — lighter, warmer shades */
+  --deep-pink: #C2436E;
+  --dark-purple: #4A1E50;
+  --mid-purple: #6E3568;
+  --light-purple: #9B5A91;
+  --orange-glow: #F4943D;
+  --warm-orange: #FCAC5C;
+  --soft-pink: #E87D9B;
+  --rose: #E06F9A;
+  
+  /* Neutrals */
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.78);
+  --text-muted: rgba(255, 255, 255, 0.55);
+  --card-bg: rgba(255, 255, 255, 0.10);
+  --card-bg-hover: rgba(255, 255, 255, 0.16);
+  --card-border: rgba(255, 255, 255, 0.14);
+  --overlay-dark: rgba(50, 15, 50, 0.85);
+  
+  /* Shadows */
+  --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.18);
+  --shadow-glow: 0 0 30px rgba(244, 148, 61, 0.35);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.25);
+  
+  /* Spacing */
+  --sidebar-width: 90px;
+  --section-padding: 40px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Border radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 50%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(135deg, var(--dark-purple) 0%, #3A1540 50%, #2A0E35 100%);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark-purple);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--deep-pink);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--soft-pink);
+}
+
+/* Selection styling */
+::selection {
+  background: var(--deep-pink);
+  color: var(--text-primary);
+}
+
+/* Global animation keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(232, 115, 42, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(232, 115, 42, 0.6); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,36 @@
+/* ==========================================
+   SHARED CARD — Glassmorphism card component
+   ========================================== */
+
+.card {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    transition: all var(--transition-fast);
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+}
+
+.card:hover {
+    background: var(--card-bg-hover);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card);
+}
+
+.clickable {
+    cursor: pointer;
+}

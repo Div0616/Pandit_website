@@ -1,0 +1,353 @@
+/* ==========================================
+   REVIEWS SECTION — Card-style testimonials
+   ========================================== */
+
+.reviewsSection {
+    padding: 50px var(--section-padding);
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* --- Section Header --- */
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.headerTop {
+    margin-bottom: 12px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 18px;
+    background: linear-gradient(135deg, rgba(232, 115, 42, 0.15), rgba(139, 26, 74, 0.15));
+    border: 1px solid rgba(232, 115, 42, 0.25);
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--orange-glow);
+    letter-spacing: 1px;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.sectionSubtitle {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* --- Trust Indicators Bar --- */
+.trustBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 36px;
+    padding: 16px 28px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+}
+
+.trustItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.trustStars {
+    color: #FFD700;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.trustDetail {
+    display: flex;
+    flex-direction: column;
+}
+
+.trustValue {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.trustLabel {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.trustDivider {
+    width: 1px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Cards Grid --- */
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+/* --- Individual Review Card --- */
+.reviewCard {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-fast);
+    animation: fadeIn 0.5s ease forwards;
+    animation-fill-mode: both;
+}
+
+.reviewCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+}
+
+.reviewCard:hover {
+    background: var(--card-bg-hover);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35), 0 0 20px rgba(232, 115, 42, 0.08);
+    border-color: rgba(232, 115, 42, 0.2);
+}
+
+/* --- Quote Icon --- */
+.quoteIcon {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--orange-glow);
+    opacity: 0.25;
+    margin-bottom: 4px;
+    font-family: Georgia, serif;
+}
+
+/* --- Review Text --- */
+.reviewText {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+    min-height: 80px;
+}
+
+/* --- Star Rating Row --- */
+.starsRow {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 16px;
+}
+
+.starFilled {
+    color: #FFD700;
+    font-size: 1rem;
+}
+
+.starEmpty {
+    color: rgba(255, 255, 255, 0.15);
+    font-size: 1rem;
+}
+
+.ratingNumber {
+    margin-left: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+/* --- Card Divider --- */
+.cardDivider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+    margin-bottom: 16px;
+}
+
+/* --- User Info Row --- */
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Circular avatar placeholder */
+.avatarCircle {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--deep-pink), var(--orange-glow));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(232, 115, 42, 0.25);
+    position: relative;
+}
+
+/* Glow ring around avatar */
+.avatarCircle::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--orange-glow), var(--deep-pink), var(--mid-purple));
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.avatarInitials {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.userDetails {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.userName {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.userMeta {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Verified badge */
+.verifiedBadge {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #22C55E, #16A34A);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+}
+
+/* --- Navigation --- */
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.navArrow {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all var(--transition-fast);
+}
+
+.navArrow:hover {
+    background: var(--card-bg-hover);
+    box-shadow: 0 0 15px rgba(232, 115, 42, 0.2);
+    transform: scale(1.08);
+}
+
+.navDots {
+    display: flex;
+    gap: 8px;
+}
+
+.navDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.activeDot {
+    background: var(--orange-glow);
+    width: 24px;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(232, 115, 42, 0.4);
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .cardsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .reviewsSection {
+        padding: 30px 16px;
+    }
+
+    .cardsGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .sectionTitle {
+        font-size: 1.5rem;
+    }
+
+    .trustBar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .trustDivider {
+        width: 80%;
+        height: 1px;
+    }
+
+    .reviewCard {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,197 @@
+/* ==========================================
+   CUSTOMERS SECTION — Image card gallery
+   with hover/tap description reveal
+   ========================================== */
+
+.customersSection {
+    padding: 50px var(--section-padding);
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* --- Section Header --- */
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.headerTop {
+    margin-bottom: 12px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 18px;
+    background: linear-gradient(135deg, rgba(232, 115, 42, 0.15), rgba(139, 26, 74, 0.15));
+    border: 1px solid rgba(232, 115, 42, 0.25);
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--orange-glow);
+    letter-spacing: 1px;
+}
+
+.sectionTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.sectionSubtitle {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* --- Cards Grid --- */
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+/* --- Individual Customer Card --- */
+.customerCard {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    max-width: 320px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    cursor: pointer;
+    transition: all var(--transition-smooth);
+    animation: fadeIn 0.5s ease forwards;
+    animation-fill-mode: both;
+}
+
+.customerCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    z-index: 2;
+}
+
+.customerCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 24px rgba(232, 115, 42, 0.12);
+    border-color: rgba(232, 115, 42, 0.25);
+}
+
+/* --- Customer Image --- */
+.customerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform var(--transition-slow);
+}
+
+.customerCard:hover .customerImage {
+    transform: scale(1.06);
+}
+
+/* --- Overlay with description --- */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 28px 22px 22px;
+    background: linear-gradient(to top, rgba(20, 3, 20, 0.92) 0%, rgba(20, 3, 20, 0.7) 60%, transparent 100%);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transform: translateY(calc(100% - 58px));
+    transition: transform var(--transition-smooth);
+    z-index: 1;
+}
+
+/* Show name always, description on hover */
+.customerCard:hover .overlay,
+.customerCard.active .overlay {
+    transform: translateY(0);
+}
+
+.customerName {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nameGlow {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--orange-glow);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(232, 115, 42, 0.6);
+    flex-shrink: 0;
+}
+
+.customerDesc {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    opacity: 0;
+    transition: opacity var(--transition-smooth);
+}
+
+.customerCard:hover .customerDesc,
+.customerCard.active .customerDesc {
+    opacity: 1;
+}
+
+.customerLocation {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 10px;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .cardsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+}
+
+@media (max-width: 600px) {
+    .customersSection {
+        padding: 30px 16px;
+    }
+
+    .cardsGrid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .sectionTitle {
+        font-size: 1.5rem;
+    }
+
+    .customerCard {
+        aspect-ratio: 3 / 4;
+        max-width: 100%;
+    }
+
+    /* On mobile, always show name portion of overlay */
+    .overlay {
+        transform: translateY(calc(100% - 54px));
+    }
+}
