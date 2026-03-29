@@ -50,15 +50,15 @@ export default function Footer({ onNavigate }) {
           <span className={styles.columnTitle}>Contact Us</span>
           <div className={styles.contactItem}>
             <span className={styles.contactIcon}>📞</span>
-            +91 98765 43210
+            +91 9022717632
           </div>
-          <div className={styles.contactItem}>
+          {/* <div className={styles.contactItem}>
             <span className={styles.contactIcon}>✉️</span>
             info@pandit.com
-          </div>
+          </div> */}
           <div className={styles.contactItem}>
             <span className={styles.contactIcon}>📍</span>
-            Varanasi, Uttar Pradesh
+            Naigaon , Mumbai
           </div>
         </div>
       </div>
@@ -67,11 +67,11 @@ export default function Footer({ onNavigate }) {
 
       <div className={styles.footerBottom}>
         <span className={styles.copyright}>
-          © {new Date().getFullYear()} Pandit.com — All rights reserved
+          © {new Date().getFullYear()} rising2X — All rights reserved
         </span>
         <div className={styles.socials}>
           <a href="#" className={styles.socialLink} aria-label="Facebook">f</a>
-          <a href="#" className={styles.socialLink} aria-label="Instagram">📸</a>
+          <a href="https://www.instagram.com/anuj_pandey.2?igsh=NjF6YWV4MDR0dXV6" className={styles.socialLink} aria-label="Instagram">📸</a>
         </div>
       </div>
     </footer>
