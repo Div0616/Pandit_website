@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Pandit_website/static/css/main.50e59659.css",
-    "main.js": "/Pandit_website/static/js/main.6e3415f0.js",
-    "static/media/customer1.png": "/Pandit_website/static/media/customer1.39a6d7a52d62bf1a77a0.png",
-    "static/media/customer6.png": "/Pandit_website/static/media/customer6.88f8945c8662aefaaf4b.png",
-    "static/media/customer5.png": "/Pandit_website/static/media/customer5.24073fe8efd7ec0b5a59.png",
-    "static/media/customer7.png": "/Pandit_website/static/media/customer7.a4a1c641a9c16c08e6d2.png",
-    "static/media/customer2.png": "/Pandit_website/static/media/customer2.36863bcf22810997f4ee.png",
-    "static/media/customer4.png": "/Pandit_website/static/media/customer4.f0c86aa3cdd8b263a7ed.png",
-    "static/media/customer3.png": "/Pandit_website/static/media/customer3.a975056110ba34fdfcd1.png",
-    "static/media/1000129607.png": "/Pandit_website/static/media/1000129607.d875447f3c78772732e5.png",
-    "index.html": "/Pandit_website/index.html",
-    "main.50e59659.css.map": "/Pandit_website/static/css/main.50e59659.css.map",
-    "main.6e3415f0.js.map": "/Pandit_website/static/js/main.6e3415f0.js.map"
+    "main.css": "/static/css/main.50e59659.css",
+    "main.js": "/static/js/main.25137590.js",
+    "static/media/customer1.png": "/static/media/customer1.39a6d7a52d62bf1a77a0.png",
+    "static/media/customer6.png": "/static/media/customer6.88f8945c8662aefaaf4b.png",
+    "static/media/customer5.png": "/static/media/customer5.24073fe8efd7ec0b5a59.png",
+    "static/media/customer7.png": "/static/media/customer7.a4a1c641a9c16c08e6d2.png",
+    "static/media/customer2.png": "/static/media/customer2.36863bcf22810997f4ee.png",
+    "static/media/customer4.png": "/static/media/customer4.f0c86aa3cdd8b263a7ed.png",
+    "static/media/customer3.png": "/static/media/customer3.a975056110ba34fdfcd1.png",
+    "static/media/1000129607.png": "/static/media/1000129607.d875447f3c78772732e5.png",
+    "index.html": "/index.html",
+    "main.50e59659.css.map": "/static/css/main.50e59659.css.map",
+    "main.25137590.js.map": "/static/js/main.25137590.js.map"
   },
   "entrypoints": [
     "static/css/main.50e59659.css",
-    "static/js/main.6e3415f0.js"
+    "static/js/main.25137590.js"
   ]
 }
